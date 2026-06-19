@@ -1,0 +1,22 @@
+{
+  "movie_count": 1976,
+  "detail_pages": 1976,
+  "category_pages": 10,
+  "category_items": 1976,
+  "html_files": 1991,
+  "asset_files": 5,
+  "image_files_in_zip": 0,
+  "category_distribution": {
+    "热播剧集": 198,
+    "热门电影": 198,
+    "华语片库": 198,
+    "海外剧场": 198,
+    "悬疑犯罪": 198,
+    "喜剧轻松": 198,
+    "动作冒险": 197,
+    "爱情青春": 197,
+    "奇幻科幻": 197,
+    "动画合家": 197
+  },
+  "errors": []
+}

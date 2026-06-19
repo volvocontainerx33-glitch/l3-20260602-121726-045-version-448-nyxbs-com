@@ -1,0 +1,4 @@
+(function(){
+function setup(box){var video=box.querySelector('video');var cover=box.querySelector('.player-cover');var button=box.querySelector('.player-start');var url=video?video.getAttribute('data-stream'):'';var ready=false;var hls=null;function load(){if(ready||!video||!url)return;if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=url}else if(window.Hls&&window.Hls.isSupported()){hls=new Hls({enableWorker:true});hls.loadSource(url);hls.attachMedia(video)}else{video.src=url}ready=true}function play(){load();box.classList.add('is-playing');if(video){video.controls=true;var p=video.play();if(p&&p.catch)p.catch(function(){})}}if(cover)cover.addEventListener('click',play);if(button)button.addEventListener('click',function(e){e.stopPropagation();play()});if(video)video.addEventListener('click',function(){if(video.paused)play()})}
+document.querySelectorAll('.player-wrap').forEach(setup);
+})();
